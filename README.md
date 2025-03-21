@@ -17,7 +17,7 @@ but if you aren't then I will explain the coordinates:
 **push y** - if the text-content exceeds this value it'll be moved to a new dialog entry (but not inserted into the list) 
 
 to color the text (ignore the boxes [] ), use: \
-^**hexadecimal 16****text-content** \
+^**hexadecimal 16**(and)**text-content** \
 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f \
 try this: I like ^cgems yippie (gems will be a purple)
 
