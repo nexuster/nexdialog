@@ -5,6 +5,7 @@ this is not at all done because i am stupid and i have no idea how to actually d
 how to manually format your dialog entries in the dialog list:
 
 **first letter x**§ **first letter y**§ **wrap x**§ **push y**
+
 name§text-content§sound-id§optional-event
 another-name§text-content§sound-id§optional-event
 
