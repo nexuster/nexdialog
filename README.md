@@ -9,7 +9,7 @@ how to manually format your dialog entries in the dialog list:
 **name**§**text-content**§**sound-id**§**optional-event** \
 **another-name**§**text-content**§**sound-id**§**optional-event**
 
-you don't really need to worry about the coordinates in the first line, if you're using my dialog box then just keep them at -90,-70,180,-150 \
+you don't really need to worry about the coordinates in the first line, if you're using my dialog box then just keep them at **-90**, **-70**, **180**, **-150** \
 but if you aren't then I will explain the coordinates:
 
 **first letter x,y** - the position of where text-content will begin from the top left corner \
@@ -18,9 +18,9 @@ but if you aren't then I will explain the coordinates:
 
 to color the text (ignore the boxes [] ), use: \
 ^**hexadecimal 16**(and)**text-content** \
-0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f \
-try this: I like ^cgems yippie (gems will be a purple)
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f \
+try this: I like **^c**gems yippie (gems will be a purple)
 
-to line break, use /n \
-to skip the current entry, use -n \
-to type the continue arrow, use ¶
+to line break, use **/n** \
+to skip the current entry, use **-n** \
+to type the continue arrow, use **¶**
