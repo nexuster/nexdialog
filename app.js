@@ -6,7 +6,8 @@ if (submitButton.textContent != "") {
     submitButton.addEventListener('click', function(e) {
         let newSpeaker = document.createElement('option');
         newSpeaker.textContent = speakerEntry.textContent;
-        speakerEntry.textContent = "";
+        newSpeaker.value = speakerEntry.textContent;
+        //speakerEntry.textContent = "";
         entrySpeaker.appendChild(speakerEntry);
     });
 } else {
