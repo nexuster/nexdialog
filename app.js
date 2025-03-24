@@ -6,31 +6,31 @@ function assignUniqueId(element, prefix) {
 }
 
 window.onload = function() {
-    const posSubmit = document.querySelector('#posSubmit');
-    const x1 = document.querySelector('x1').value;
-    const y1 = document.querySelector('y1').value;
-    const x2 = document.querySelector('x2').value;
-    const y2 = document.querySelector('y2').value;
-    let submitted = false
+    // const posSubmit = document.querySelector('#posSubmit');
+    // const x1 = document.querySelector('x1').value;
+    // const y1 = document.querySelector('y1').value;
+    // const x2 = document.querySelector('x2').value;
+    // const y2 = document.querySelector('y2').value;
+    // let submitted = false
 
-    posSubmit.addEventListener('click', function(e) {
-        if (!submitted) {
-            let submitted = true
-            let outputString = "${x1}§${y1}§${x2}§${y2}"
-            let newEntry = document.createElement('div');
-            newEntry.textContent = outputString;
+    // posSubmit.addEventListener('click', function(e) {
+    //     if (!submitted) {
+    //         let submitted = true
+    //         let outputString = "${x1}§${y1}§${x2}§${y2}"
+    //         let newEntry = document.createElement('div');
+    //         newEntry.textContent = outputString;
 
-            let deleteButton = document.createElement('button');
-            deleteButton.textContent = 'edit';
+    //         let deleteButton = document.createElement('button');
+    //         deleteButton.textContent = 'edit';
 
-            newEntry.appendChild(deleteButton);
-            entries.appendChild(newEntry);
-        }
-        deleteButton.addEventListener('click', function(e) {
-            newEntry.remove(); //deletes div that contains the button
-            let submitted = false
-        })
-    });
+    //         newEntry.appendChild(deleteButton);
+    //         entries.appendChild(newEntry);
+    //     }
+    //     deleteButton.addEventListener('click', function(e) {
+    //         newEntry.remove(); //deletes div that contains the button
+    //         let submitted = false
+    //     })
+    // });
     
     const speakerEntry = document.querySelector('#speaker');
     const submitButton = document.querySelector('#submitSpeaker');
