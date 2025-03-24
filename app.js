@@ -4,12 +4,11 @@ window.onload = function() {
     const entrySpeaker = document.querySelector('#entrySpeaker');
 
     submitButton.addEventListener('click', function(e) {
-        if (trim(entrySpeaker.text) != "") {
+        if (trim(entrySpeaker.textcontent) != "") {
             let newSpeaker = document.createElement('option');
-            let speaker = speakerEntry.text;
-            newSpeaker.text = speaker;
+            let speaker = speakerEntry.textcontent;
+            newSpeaker.textcontent = speaker;
             newSpeaker.value = speaker;
-            speakerEntry.text = "";
             entrySpeaker.add(speakerEntry);
         } else {
             alert(entrySpeaker.text + 'is not a valid speaker') //i HATE this
