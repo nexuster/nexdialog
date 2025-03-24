@@ -12,7 +12,7 @@ window.onload = function() {
             speakerEntry.text = "";
             entrySpeaker.add(speakerEntry);
         } else {
-            alert(entrySpeaker.text + 'is not a valid speaker')
+            alert(entrySpeaker.text + 'is not a valid speaker') //i HATE this
         }
     });
 }
