@@ -67,9 +67,9 @@ window.onload = function() {
     const entries = document.querySelector('#entries');
 
     entrySubmitButton.addEventListener('click', function(e) {
-        let outputString = "${entrySpeakerValue}§${entryDialog}§${entrySound}"
+        let outputString = `${entrySpeakerValue}§${entryDialog}§${entrySound}`
         if (entryEvent) {
-            outputString = "${outputString}§${entryEvent}" //adding the event parameter
+            outputString = `${outputString}§${entryEvent}` //adding the event parameter
         }
         let newEntry = document.createElement('div');
         newEntry.textContent = outputString;
