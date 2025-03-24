@@ -2,7 +2,7 @@ const speakerEntry = document.querySelector('#speaker');
 const submitButton = document.querySelector('#submitSpeaker');
 const entrySpeaker = document.querySelector('#entrySpeaker');
 
-if (submitButton.textContent != "") {
+if (submitButton.text != "") {
     submitButton.addEventListener('click', function(e) {
         let newSpeaker = document.createElement('option');
         let speaker = speakerEntry.text;
