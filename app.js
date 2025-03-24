@@ -4,14 +4,14 @@ window.onload = function() {
     const entrySpeaker = document.querySelector('#entrySpeaker');
 
     submitButton.addEventListener('click', function(e) {
-        if (trim(entrySpeaker.textcontent) != "") {
+        if (entrySpeaker.text == "") {
+            alert(entrySpeaker.text + 'is not a valid speaker') //i HATE this
+        } else {
             let newSpeaker = document.createElement('option');
             let speaker = speakerEntry.text;
             newSpeaker.text = speaker;
             newSpeaker.value = speaker;
             entrySpeaker.appendChild(newSpeaker);
-        } else {
-            alert(entrySpeaker.text + 'is not a valid speaker') //i HATE this
         }
     });
 }
