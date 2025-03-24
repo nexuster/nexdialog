@@ -6,6 +6,32 @@ function assignUniqueId(element, prefix) {
 }
 
 window.onload = function() {
+    const posSubmit = document.querySelector('#posSubmit');
+    const x1 = document.querySelector('x1').value;
+    const y1 = document.querySelector('y1').value;
+    const x2 = document.querySelector('x2').value;
+    const y2 = document.querySelector('y2').value;
+    let submitted = false
+
+    posSubmit.addEventListener('click', function(e) {
+        if (!submitted) {
+            let submitted = true
+            let outputString = "{x1}§{y1}§{x2}§{y2}"
+            let newEntry = document.createElement('div');
+            newEntry.textContent = outputString;
+
+            let deleteButton = document.createElement('button');
+            deleteButton.textContent = 'edit';
+
+            newEntry.appendChild(deleteButton);
+            entries.appendChild(newEntry);
+        }
+        deleteButton.addEventListener('click', function(e) {
+            newEntry.remove(); //deletes div that contains the button
+            let submitted = false
+        })
+    });
+    
     const speakerEntry = document.querySelector('#speaker');
     const submitButton = document.querySelector('#submitSpeaker');
     const entrySpeaker = document.querySelector('#entrySpeaker');
@@ -18,20 +44,44 @@ window.onload = function() {
         }
         let newSpeaker = addValueToDropdown(entrySpeaker,speakerEntry);
         let newOutput = document.createElement('div');
-        let newPar = document.createElement('p');
-        newPar.textContent = speakerEntry.value;
+        newOutput.textContent = speakerEntry.value;
 
         let deleteButton = document.createElement('button');
         deleteButton.textContent = '-';
 
-        newOutput.appendChild(newPar);
         newOutput.appendChild(deleteButton);
         speakers.appendChild(newOutput);
 
         deleteButton.addEventListener('click', function(e) {
-            newOutput.remove(); //deletes div that contains the button and the p element
+            newOutput.remove(); //deletes div that contains the button
             newSpeaker.remove(); //deletes the speaker that the button is paired with
         });
+    });
+
+    const entrySubmitButton = document.querySelector('#entrySubmit');
+    const entrySpeaker = document.querySelector('#entrySpeaker').value;
+    const entryDialog = document.querySelector('#entryDialog').value;
+    const entrySound = document.querySelector('#entrySound').value;
+    const entryEvent = document.querySelector('#entryEvent').value;
+
+    const entries = document.querySelector('#entries');
+
+    entrySubmitButton.addEventListener('click', function(e) {
+        let outputString = "{entrySpeaker}§{entryDialog}§{entrySound}"
+        if (entryEvent) {
+            outputString = "{outputString}§{entryEvent}" //adding the event parameter
+        }
+        let newEntry = document.createElement('div');
+        newEntry.textContent = outputString;
+
+        let deleteButton = document.createElement('button');
+        deleteButton.textContent = '-';
+
+        newEntry.appendChild(deleteButton);
+        entries.appendChild(newEntry);
+        deleteButton.addEventListener('click', function(e) {
+            newEntry.remove(); //deletes div that contains the button
+        })
     });
 }
 
@@ -42,7 +92,7 @@ function addValueToDropdown(dropdown,entry) {
     newSpeaker.text = speaker;
     newSpeaker.value = speaker;
     dropdown.appendChild(newSpeaker);
-
     entry.value == '';
+
     return newSpeaker;
 }

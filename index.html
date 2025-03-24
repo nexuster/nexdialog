@@ -5,6 +5,13 @@
     <title>nexdialog</title>
   </head>
   <body>
+    <div id="positions">
+      first letter x: <input id="x1" placeholder="enter first letter x"></input>
+      first letter y: <input id="y1" placeholder="enter first letter y"></input>
+      word wrap x: <input id="x2" placeholder="enter word wrap x"></input>
+      line push y: <input id="y2" placeholder="enter line push y"></input>
+      <button id="posSubmit">submit</button>
+    </div>
     <div id="speakerEntry">
       <input id="speaker" placeholder="enter a name"></input>
       <button id="submitSpeaker">add</button>
@@ -12,13 +19,18 @@
     <div id="speakers">
       <!-- speakers will appear dynamically here -->
     </div>
-    <div id="entry">
+    <div id="dialogEntry">
       <select id="entrySpeaker">
         <option value="none">no speaker</option>
       </select>
       <input id="entryDialog" placeholder="type the dialog"></input>
       <input id="entrySound" placeholder="type in a sound id"></input>
       <input id="entryEvent" placeholder="type the name of an event"></input>
+      <button id="entrySubmit">add</button>
+    </div>
+    <div id="entries">
+      <p id="posPrev"></p>
+      <!-- specially formatted entries will appear hear-->
     </div>
     <script src="app.js" defer></script>
   </body>
