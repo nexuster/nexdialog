@@ -19,15 +19,18 @@ window.onload = function() {
         let newSpeaker = addValueToDropdown(entrySpeaker,speakerEntry);
         let newOutput = document.createElement('div');
         let newPar = document.createElement('p');
-        newPar.textcontent = speakerEntry.value;
+        newPar.textContent = speakerEntry.value;
+
         let deleteButton = document.createElement('button');
-        deleteButton.textcontent = '-';
+        deleteButton.textContent = '-';
+
         newOutput.appendChild(newPar);
         newOutput.appendChild(deleteButton);
         speakers.appendChild(newOutput);
+
         deleteButton.addEventListener('click', function(e) {
-            newOutput.remove();
-            newSpeaker.remove();
+            newOutput.remove(); //deletes div that contains the button and the p element
+            newSpeaker.remove(); //deletes the speaker that the button is paired with
         });
     });
 }
