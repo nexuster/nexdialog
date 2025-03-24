@@ -9,7 +9,7 @@ window.onload = function() {
             let speaker = speakerEntry.textcontent;
             newSpeaker.text = speaker;
             newSpeaker.value = speaker;
-            entrySpeaker.add(speakerEntry);
+            entrySpeaker.appendChild(newSpeaker);
         // } else {
         //     alert(entrySpeaker.text + 'is not a valid speaker') //i HATE this
         // }
