@@ -18,9 +18,11 @@ window.onload = function() {
         }
         let newSpeaker = addValueToDropdown(entrySpeaker,speakerEntry);
         let newOutput = document.createElement('div');
-        newOutput.textcontent = speakerEntry.value;
+        let newPar = document.createElement('p');
+        newPar.textcontent = speakerEntry.value;
         let deleteButton = document.createElement('button');
-        deleteButton.textcontent = '-'
+        deleteButton.textcontent = '-';
+        newOutput.appendChild(newPar);
         newOutput.appendChild(deleteButton);
         speakers.appendChild(newOutput);
         deleteButton.addEventListener('click', function(e) {
