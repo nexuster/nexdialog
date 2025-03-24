@@ -1,16 +1,18 @@
-const speakerEntry = document.querySelector('#speaker');
-const submitButton = document.querySelector('#submitSpeaker');
-const entrySpeaker = document.querySelector('#entrySpeaker');
+window.onload = function() {
+    const speakerEntry = document.querySelector('#speaker');
+    const submitButton = document.querySelector('#submitSpeaker');
+    const entrySpeaker = document.querySelector('#entrySpeaker');
 
-if (newSpeaker.text != "") {
     submitButton.addEventListener('click', function(e) {
-        let newSpeaker = document.createElement('option');
-        let speaker = speakerEntry.text;
-        newSpeaker.text = speaker;
-        newSpeaker.value = speaker;
-        speakerEntry.text = "";
-        entrySpeaker.add(speakerEntry);
+        if (trim(entrySpeaker.text) != "") {
+            let newSpeaker = document.createElement('option');
+            let speaker = speakerEntry.text;
+            newSpeaker.text = speaker;
+            newSpeaker.value = speaker;
+            speakerEntry.text = "";
+            entrySpeaker.add(speakerEntry);
+        } else {
+            alert(entrySpeaker.text + 'is not a valid speaker')
+        }
     });
-} else {
-    alert('invalid name content');
 }
