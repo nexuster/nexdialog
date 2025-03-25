@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(135deg, #6b46c1 25%, #38b2ac 25%, #38b2ac 50%, #6b46c1 50%, #6b46c1 75%, #38b2ac 75%, #38b2ac);
+    background-size: 200% 200%;
+    animation: stripeScroll 10s linear infinite;
+}
+
+@keyframes stripeScroll {
+    0% {
+        backround-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.container {
+    background-color: #6ce0da;
+    box-shadow: 5px 5px rgba(37, 39, 90, 0.5);
+    display: flex;
+    width: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #6c9ce0;
+}
