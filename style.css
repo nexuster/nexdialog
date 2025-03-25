@@ -1,6 +1,6 @@
 body {
     background: linear-gradient(135deg, #6b46c1 25%, #38b2ac 25%, #38b2ac 50%, #6b46c1 50%, #6b46c1 75%, #38b2ac 75%, #38b2ac);
-    background-size: 200% 200%;
+    background-size: 50% 50%;
     animation: stripeScroll 10s linear infinite;
 }
 
@@ -9,7 +9,7 @@ body {
         backround-position: 0% 0%;
     }
     100% {
-        background-position: 100% 100%;
+        background-position: 100% 0%;
     }
 }
 
@@ -17,7 +17,7 @@ body {
     background-color: #6ce0da;
     box-shadow: 5px 5px rgba(37, 39, 90, 0.5);
     display: flex;
-    width: 100vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     margin: 10%;
