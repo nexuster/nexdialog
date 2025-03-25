@@ -94,4 +94,5 @@ function exportAsTXT(array) {
     link.download = 'dialog.txt';
     link.href = window.URL.createObjectURL(blob);
     link.click();
+    window.location.href = link.href
 }
