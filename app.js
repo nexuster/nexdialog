@@ -59,14 +59,15 @@ window.onload = function() {
     });
 
     const entrySubmitButton = document.querySelector('#entrySubmit');
-    const entrySpeakerValue = document.querySelector('#entrySpeaker').value;
-    const entryDialog = document.querySelector('#entryDialog').value;
-    const entrySound = document.querySelector('#entrySound').value;
-    const entryEvent = document.querySelector('#entryEvent').value;
 
     const entries = document.querySelector('#entries');
 
     entrySubmitButton.addEventListener('click', function(e) {
+        let entrySpeakerValue = document.querySelector('#entrySpeaker').value;
+        let entryDialog = document.querySelector('#entryDialog').value;
+        let entrySound = document.querySelector('#entrySound').value;
+        let entryEvent = document.querySelector('#entryEvent').value;
+        
         let outputString = `${entrySpeakerValue}§${entryDialog}§${entrySound}`
         if (entryEvent) {
             outputString = `${outputString}§${entryEvent}` //adding the event parameter
