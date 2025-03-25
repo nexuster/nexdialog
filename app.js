@@ -89,11 +89,9 @@ function addValueToDropdown(dropdown,entry) {
 
 function exportAsTXT(array) {
     let text = array.join('\n');
-    const fs = require('fs');
-    const filename = 'dialog.txt';
-    fs.writeFile(filename, text, (err) => {
-        if (err) {
-            alert(`${filename} failed to import`)
-        }
-    });
+    let blob = new Blob([text], { type: 'text/plain' });
+    let link = document.createElement('a');
+    link.download = 'dialog.txt';
+    link.href = window.URL.createObjectURL(blob);
+    link.click();
 }
